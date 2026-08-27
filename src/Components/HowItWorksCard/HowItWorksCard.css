@@ -1,0 +1,90 @@
+.how-it-work-card-ys{
+    width: 330px;
+    height: 439px;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(  --bg-second-color);
+    color: var( --primary-text-color);
+    padding: 10px 30px 30px 20px;
+ }
+ .how-it-work-div-card-ys{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .how-it-work-div-card-ys .how-it-work-div-card-ys-h5 , .how-it-work-div-card-ys .how-it-work-div-card-ys-p{
+    font-family: var(--work-sans);
+   text-align: center;
+ }
+ .how-it-work-div-card-ys .how-it-work-div-card-ys-h5{
+    font-size: 22px;
+    line-height: 30.8px;
+    font-weight: 600;
+    
+ }
+ .how-it-work-div-card-ys .how-it-work-div-card-ys-p{
+    line-height: 22.4px;
+    font-size: 16px;
+    font-weight: 400;
+ }
+ @media (max-width : 1279px) and (min-width :834px ){
+    .how-it-work-card-ys{
+       width :210px;
+       height: 337px;
+       padding: 10px 20px 30px 20px;
+    } 
+    .how-it-work-card-ys img{
+       width: 160px;
+       height: 160px;
+    }
+    .how-it-work-div-card-ys{
+       width: 170px;
+    }
+    .how-it-work-div-card-ys .how-it-work-div-card-ys-h5{
+       font-size: 16px;
+       line-height: 22.4px;
+       font-weight: 600;
+     
+    }
+    .how-it-work-div-card-ys .how-it-work-div-card-ys-p{
+       font-size:12px ;
+       line-height: 16.8px;
+       font-weight: 400;
+ }}
+ @media ( max-width : 833px){
+    .how-it-work-card-ys{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       width: 315px;
+       height: auto;
+       padding: 20px;
+    }
+    .how-it-work-card-ys img{
+       width: 100px;
+       height: 100px;
+    }
+    .how-it-work-div-card-ys{
+       width: 155px;
+       height: auto;
+    }
+    .how-it-work-div-card-ys .how-it-work-div-card-ys-h5{
+       font-size: 16px;
+       line-height: 22.4px;
+       text-align: start;
+       font-weight: 600;
+    }
+    .how-it-work-div-card-ys .how-it-work-div-card-ys-p{
+       font-size:12px ;
+       line-height: 16.8px;
+       text-align: start;
+       font-weight: 400;
+    }
+ 
+ }
+ 

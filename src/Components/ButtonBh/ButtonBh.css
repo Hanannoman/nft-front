@@ -1,0 +1,44 @@
+.bh-button-one,
+.bh-button-two,
+.bh-button-three ,
+.bh-button-four{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20px 50px;
+  line-height: 22.4px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: var(--work-sans);
+  font-size: 16px;
+  color: var(--primary-text-color);
+  gap: 12px;
+  transition: 2s;
+  text-decoration: none;
+}
+.bh-button-icon {
+  width: 20px;
+  height: 20px;
+}
+.bh-button-one {
+  background-color: var(--button-bg-color);
+  border: 0;
+}
+.bh-button-two{
+  background-color: transparent;
+  border: 2px solid var(--button-bg-color);
+}
+.bh-button-three {
+  background-color: var(--primary-text-color);
+  border: 0;
+  color: var(--bg-color);
+}
+.bh-button-one:hover,
+.bh-button-two:hover,
+.bh-button-three:hover {
+  transform: scale(0.95);
+}
+.button-text {
+  margin: 0 !important;
+  text-wrap: nowrap;
+}

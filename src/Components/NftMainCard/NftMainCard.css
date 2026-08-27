@@ -1,0 +1,143 @@
+
+.bh-main-card-Discover{
+    background-color: var(--bg-second-color);
+    height: auto;
+    min-height: 469px;
+    width: 330px; 
+    border-radius: 20px;
+    color: var(--primary-text-color);
+    font-family: var(--space-mono);
+    margin-bottom: 20px;
+}
+.bh-main-card-Artist{
+    background-color: var(--bg-color);
+    height: auto;
+    height: 469px;
+    width: 100%;
+    max-width: 330px; 
+    border-radius: 20px;
+    color: var(--primary-text-color);
+    font-family: var(--space-mono);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.bh-main-card-img{
+    border-radius: 20px 20px 0  0;
+    width: 100% ;
+    height: 296px;
+}
+.bh-main-card-desc{
+    padding: 20px 30px 25px 30px;
+}
+.bh-main-card-desc h5{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30.8px;
+    margin-bottom: 5px;
+    font-family: var(--work-sans) !important;
+}
+.bh-main-card-artist img{
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+.bh-main-card-artist p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    margin: 0;
+}
+.bh-main-card-price{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bh-main-card-price-title{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13.2px;
+    margin-bottom: 8px;
+}
+.bh-main-card-price-number{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    margin: 0;
+    color: rgb(123, 35, 205);
+}
+/* Card wrapper needs position relative */
+.bh-main-card-Discover,
+.bh-main-card-Artist {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    max-width: 330px; 
+    font-family:"Work Sans", serif ;
+    
+}
+
+.bh-card-actions {
+    padding: 10px 12px 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.bh-card-actions > div {
+    width: 100%;
+}
+
+.bh-btn-buy {
+    width: 100%;
+}
+
+/* Buttons */
+.bh-card-btn {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--space-mono);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.bh-card-btn:hover {
+    opacity: 0.85;
+}
+
+.bh-btn-buy {
+    background-color: var(--primary-color, #7B2FBE);
+    color: #fff;
+}
+
+.bh-btn-edit {
+    background-color: #3a3a5c;
+    color: #fff;
+}
+
+.bh-btn-delete {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+@media (max-width:833px) {
+    .bh-main-card{
+        height: 402px;
+        width: 315px; /* for delete  */ 
+    }
+    .bh-main-card-img{
+        height: 238px;
+    }
+    .bh-main-card-desc{
+        padding: 20px 20px 25px 20px;
+    }
+    .bh-main-card-price-number{
+        font-size: 12px;
+        line-height: 13.2px;
+    }
+}

@@ -1,0 +1,276 @@
+.mh-footer {
+  background-color: var(--bg-second-color);
+  padding: 40px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mh-footer-part1 {
+  display: flex;
+  justify-content: space-between;
+  width: 1049.41px;
+}
+
+.mh-footer-part1-1 {
+  width: 327.41px;
+  padding-right: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mh-img-part1-1 {
+  width: 243.41px;
+}
+
+.mh-div-part1-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mh-p-part1-1 {
+  width: 238px;
+  height: 44px;
+  font-family: var(--work-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+
+.mh-div2-part1-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mh-span-part1-1 {
+  width: 238px;
+  height: 18px;
+  font-family: var(--work-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+
+.mh-footer-part1-2 {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mh-h5-part1-2 {
+  width: 95px;
+  height: 35px;
+  font-family: var(--space-mono);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 35.2px;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+
+.mh-ul-part1-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.mh-li-part1-2 {
+  font-family: var(--work-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--secondary-text-color);
+  height: 22px;
+}
+
+.mh-Marketplace {
+  width: 96px;
+}
+
+.mh-Rankings {
+  width: 70px;
+}
+
+.mh-ConnectAWallet {
+  width: 133px;
+}
+
+.mh-footer-part1-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mh-h5-part1-3 {
+  margin: 0;
+  width: 297px;
+  height: 35px;
+  font-family: var(--space-mono);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 35.2px;
+  color: var(--primary-text-color);
+}
+
+.mh-div-part1-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mh-p-part1-3 {
+  width: 330px;
+  height: 44px;
+  font-family: var(--work-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+
+.mh-footer-part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 1049.41px;
+  border-top: 1px var(--secondary-text-color) solid;
+}
+
+.mh-p-part2 {
+  color: var(--secondary-text-color);
+  font-family: var(--work-sans);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13.2px;
+  margin: 0;
+  height: 13px;
+}
+
+@media(min-width: 834px) and (max-width:1279px){
+  .mh-footer {
+    gap: 49px;
+  }
+
+  .mh-footer-part1 {
+    flex-direction: column;
+    justify-content: start;
+    width: 690px;
+    gap: 30px;
+  }
+
+  .mh-footer-part1-1 {
+    width: 690px;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .mh-p-part1-1,
+  .mh-p-part1-3 {
+    width: 690px;
+    height: 22px;
+  }
+
+  .mh-span-part1-1 {
+    width: 690px;
+    height: 22px;
+  }
+
+  .mh-footer-part1-2 {
+    width: 690px;
+    gap: 20px;
+  }
+
+  .mh-h5-part1-2 {
+    width: 690px;
+  }
+
+  .mh-ul-part1-2 {
+    width: 690px;
+  }
+
+  .mh-Marketplace {
+    width: 97px;
+  }
+
+  .mh-Rankings {
+    width: 71px;
+  }
+
+  .mh-footer-part1-3 {
+    width: 690px;
+    gap: 20px;
+  }
+
+  .mh-h5-part1-3 {
+    width: 690px;
+  }
+
+  .mh-footer-part2 {
+    width: 690px;
+  }
+}
+
+@media(max-width: 833px){
+  .mh-footer-part1 {
+    flex-direction: column;
+    justify-content: start;
+    width: 315px;
+    gap: 30px;
+  }
+
+  .mh-footer-part1-1 {
+    width: 315px;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .mh-p-part1-1,
+  .mh-p-part1-3 {
+    width: 315px;
+    height: 44px;
+  }
+
+  .mh-span-part1-1 {
+    width: 315px;
+    height: 22px;
+  }
+
+  .mh-footer-part1-2 {
+    width: 315px;
+    gap: 20px;
+  }
+
+  .mh-h5-part1-2 {
+    width: 315px;
+  }
+
+  .mh-ul-part1-2 {
+    width: 315px;
+  }
+
+  .mh-footer-part1-3 {
+    width: 315px;
+    gap: 20px;
+  }
+
+  .mh-h5-part1-3 {
+    width: 315px;
+  }
+
+  .mh-footer-part2 {
+    width: 315px;
+  }
+}

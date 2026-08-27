@@ -1,0 +1,41 @@
+.bh-hero-father {
+  position: relative;
+}
+
+.bh-hero-ton-corner-btn {
+  position: absolute;
+  bottom: 16px;
+  right: -11%;  
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: #c4b5fd;
+  padding: 11px 18px;
+  border-radius: 20px;
+  font-size: 1rem;      
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 5;
+  white-space: nowrap;
+}
+.bh-hero-ton-corner-btn svg {
+  font-size: 1.1rem;  
+}
+
+.bh-hero-ton-corner-btn:hover {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: #7c3aed;
+}
+
+/* بالموبايل: نخليه يطلع كعنصر عادي بالتسلسل، مش absolute */
+@media (max-width: 768px) {
+  .bh-hero-ton-corner-btn {
+    position: static;     /* ← يخرج من فوق الإحصائيات */
+    margin: 16px auto 0;  /* ← يتوسط تحت الإحصائيات */
+    display: flex;
+    width: fit-content;
+  }
+}

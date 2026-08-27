@@ -1,0 +1,611 @@
+:root {
+  --pf-bg: #0d0d1a;
+  --pf-card: #12122a;
+  --pf-border: rgba(255, 255, 255, 0.07);
+  --pf-purple: #7c3aed;
+  --pf-purple-light: #a78bfa;
+  --pf-accent: #06b6d4;
+  --pf-text: #f1f0ff;
+  --pf-muted: #6b7280;
+  --pf-cover-h: 220px;
+  --pf-avatar-size: 96px;
+}
+.pf-nft-price-input::-webkit-outer-spin-button,
+.pf-nft-price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pf-nft-price-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.pf-wrapper {
+  min-height: 100vh;
+  background: var(--pf-bg);
+  color: var(--pf-text);
+  padding-bottom: 60px;
+  font-family:"Work Sans", serif ;
+}
+
+/* Cover */
+.pf-cover {
+  position: relative;
+  width: 100%;
+  height: var(--pf-cover-h);
+  background: linear-gradient(135deg, #1a0533 0%, #0d0d1a 40%, #0a1628 70%, #0d1f3c 100%);
+  overflow: hidden;
+}
+.pf-cover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.pf-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 20% 50%, rgba(124, 58, 237, 0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 80% 30%, rgba(6, 182, 212, 0.2) 0%, transparent 65%);
+}
+.pf-cover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--pf-bg));
+}
+
+/* Avatar */
+.pf-avatar-ring {
+  position: relative;
+  margin-top: calc(var(--pf-avatar-size) / -2);
+  margin-left: 40px;
+  width: fit-content;
+  z-index: 10;
+}
+.pf-avatar {
+  width: var(--pf-avatar-size);
+  height: var(--pf-avatar-size);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pf-purple), var(--pf-accent));
+  border: 3px solid var(--pf-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.4), 0 8px 32px rgba(124, 58, 237, 0.3);
+}
+
+/* Hero Info */
+.pf-hero-info {
+  padding: 16px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  min-width: 0;
+}
+.pf-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pf-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, var(--pf-text), var(--pf-purple-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pf-name-input {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--pf-purple);
+  color: var(--pf-text);
+  outline: none;
+  padding: 4px 2px;
+  min-width: 200px;
+}
+
+/* Buttons */
+.pf-action-btns {
+  display: flex;
+  gap: 10px;
+}
+.pf-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+.pf-btn-edit {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--pf-purple-light);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+}
+.pf-btn-edit:hover {
+  background: rgba(124, 58, 237, 0.28);
+  border-color: var(--pf-purple-light);
+}
+.pf-btn-save {
+  background: var(--pf-purple);
+  color: #fff;
+}
+.pf-btn-save:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+.pf-btn-cancel {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--pf-muted);
+  border: 1px solid var(--pf-border);
+}
+.pf-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--pf-text);
+}
+
+/* Wallet Row */
+.pf-wallet-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Wallet Pill */
+.pf-wallet-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--pf-border);
+  color: var(--pf-text);
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.pf-wallet-pill span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.pf-wallet-pill:hover {
+  background: rgba(124, 58, 237, 0.15);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+.pf-wallet-pill--empty {
+  color: var(--pf-muted);
+  border-style: dashed;
+}
+.pf-wallet-pill--empty:hover {
+  color: var(--pf-purple-light);
+}
+.pf-wallet-icon {
+  color: var(--pf-purple-light);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Details */
+.pf-details {
+  margin: 32px 40px 0;
+  background: var(--pf-card);
+  border: 1px solid var(--pf-border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  min-width: 0;
+}
+.pf-stats-row {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.pf-stat {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 24px;
+  border-right: 1px solid var(--pf-border);
+  overflow: hidden;
+}
+.pf-stat:first-child { padding-left: 0; }
+.pf-stat:last-child { border-right: none; }
+
+.pf-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--pf-muted);
+  font-weight: 600;
+}
+.pf-stat-value {
+  font-size: 0.95rem;
+  color: var(--pf-text);
+  font-weight: 500;
+}
+.pf-stat-value--mono {
+  font-family: 'Courier New', monospace;
+  font-size: 0.88rem;
+  color: var(--pf-purple-light);
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.pf-stat-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  color: var(--pf-accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  width: fit-content;
+}
+.pf-field-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 8px;
+  color: var(--pf-text);
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  max-width: 240px;
+}
+.pf-field-input:focus { border-color: var(--pf-purple-light); }
+.pf-password-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid var(--pf-border);
+}
+
+/* Link Wallet */
+.pf-link-wallet { margin: 24px 40px 0; }
+.pf-link-wallet-inner {
+  background: var(--pf-card);
+  border: 1px dashed rgba(124, 58, 237, 0.4);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.pf-link-wallet-icon {
+  font-size: 1.4rem;
+  color: var(--pf-purple-light);
+  flex-shrink: 0;
+}
+.pf-wallet-input {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 8px;
+  color: var(--pf-text);
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  outline: none;
+  font-family: 'Courier New', monospace;
+  transition: border-color 0.2s;
+}
+.pf-wallet-input:focus { border-color: var(--pf-purple-light); }
+.pf-wallet-input::placeholder { color: var(--pf-muted); }
+.pf-link-wallet-btns { display: flex; gap: 10px; }
+
+/* Loading */
+.pf-loading {
+  min-height: 100vh;
+  background: var(--pf-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pf-spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(124, 58, 237, 0.2);
+  border-top-color: var(--pf-purple);
+  animation: spin 0.8s linear infinite;
+}
+/* ===== NFTs Section ===== */
+.pf-nfts-section {
+  max-width: 900px;
+  margin: 32px auto 60px;
+  padding: 0 24px;
+}
+
+.pf-nfts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pf-nfts-title {
+  color: #f9fafb;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pf-nfts-group-label {
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pf-nfts-loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.pf-nfts-empty {
+  text-align: center;
+  padding: 48px 24px;
+  border: 1px dashed #1f2937;
+  border-radius: 16px;
+  background: #0d1117;
+}
+
+.pf-nfts-empty-text {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* Grid */
+.pf-nfts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.pf-nft-card {
+  background: #0d1117;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.pf-nft-card:hover {
+  border-color: #374151;
+  transform: translateY(-2px);
+}
+
+.pf-nft-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.pf-nft-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badges */
+.pf-nft-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pf-nft-badge--draft {
+  background: rgba(107, 114, 128, 0.85);
+  color: #f9fafb;
+}
+
+.pf-nft-badge--listed {
+  background: rgba(16, 185, 129, 0.85);
+  color: #fff;
+}
+
+/* Info */
+.pf-nft-info {
+  padding: 12px 14px 8px;
+  flex: 1;
+}
+
+.pf-nft-title {
+  color: #f9fafb;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pf-nft-desc {
+  color: #6b7280;
+  font-size: 12px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pf-nft-price {
+  color: #a78bfa;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+/* Actions */
+.pf-nft-actions {
+  padding: 10px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pf-nft-list-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pf-nft-price-input {
+  background: #161b22;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  color: #ecacac !important;
+  padding: 6px 10px;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.pf-nft-price-input:focus {
+  outline: none;
+  border-color: #a78bfa;
+}
+
+.pf-nft-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.pf-nft-btn--list {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+}
+
+.pf-nft-btn--delete {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+
+.pf-nft-btn--cancel {
+  background: #1f2937;
+  color: #9ca3af;
+  width: auto;
+  padding: 7px 10px;
+  flex-shrink: 0;
+}
+
+.pf-nft-btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+/* Create button */
+.pf-btn-create {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.pf-btn-create:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .pf-avatar-ring { 
+    margin-left: 20px; 
+  }
+  .pf-hero-info {
+    padding: 14px 20px 0; 
+  }
+  .pf-details, .pf-link-wallet { 
+    margin: 20px 20px 0; padding: 20px; 
+  }
+  .pf-stats-row { 
+    flex-direction: column; gap: 20px; 
+  }
+  .pf-stat { 
+    padding: 0; border-right: none; 
+    border-bottom: 1px solid var(--pf-border); 
+    padding-bottom: 16px; 
+  }
+  .pf-stat:last-child { 
+    border-bottom: none; 
+  }
+  .pf-name { 
+    font-size: 1.4rem; 
+  }
+  .pf-link-wallet-inner { 
+    flex-direction: column; align-items: flex-start; 
+  }
+}

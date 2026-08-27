@@ -1,0 +1,42 @@
+.sec-How-it-work-ys{
+    padding-top: 80px ;
+    padding-bottom: 80px;  
+ }
+ .div-cards-how-it-work-ys{
+     display: flex;
+     gap: 30px;
+ }
+ .title-how-it-work-ys{
+     margin-bottom: 48px;
+ }
+ .my-section-how-it-work-ys{
+     background-color: var(--bg-color);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ @media (max-width : 1279px) and (min-width :834px ){
+     .sec-How-it-work-ys{
+         padding-top: 40px;
+         padding-bottom: 40px;
+         
+     }
+     .title-how-it-work-ys{
+         margin-bottom: 40px;
+     }
+ }
+ @media ( max-width : 833px){
+     .sec-How-it-work-ys{
+         padding-top: 40px ;
+         padding-bottom: 40px;  
+      }
+      .div-cards-how-it-work-ys{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      }
+      .title-how-it-work-ys{
+          margin-bottom: 40px;
+      }
+ }

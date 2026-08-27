@@ -1,0 +1,16 @@
+.create-account-login-text {
+  text-align: center;
+  margin-top: 16px;
+  color: #858584;
+  font-size: 15px;
+}
+
+.create-account-login-link {
+  color: #a259ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-account-login-link:hover {
+  color: #bd85ff;
+}

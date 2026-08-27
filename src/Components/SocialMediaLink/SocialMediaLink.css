@@ -1,0 +1,15 @@
+.ys-myul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+.ys-myicon-web-li-a-none {
+  display: none;
+}
+@media (max-width: 834px) {
+  .ys-myicon-li-a {
+    width: 24px;
+    height: 24px;
+  }
+}

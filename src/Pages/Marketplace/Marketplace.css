@@ -1,0 +1,131 @@
+.bh-marketplace {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 60px 80px;
+    font-family:"Work Sans", serif ;
+}
+
+.bh-marketplace-header {
+    margin-bottom: 50px;
+}
+
+.bh-marketplace-header h1 {
+    font-family: var(--work-sans);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+
+.bh-marketplace-header p {
+    font-family: var(--space-mono);
+    font-size: 16px;
+    color: var(--secondary-text-color);
+}
+
+.bh-marketplace-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.bh-marketplace-status {
+    font-family: var(--space-mono);
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+}
+
+.bh-marketplace-error {
+    color: #e74c3c;
+}
+.bh-marketplace-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 36px;
+}
+
+.bh-marketplace-search {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.bh-marketplace-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.bh-marketplace-search-input {
+  width: 100%;
+  padding: 13px 16px 13px 42px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1a1a2e;
+  color: #f1f1f1;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bh-marketplace-search-input::placeholder {
+  color: #6b7280;
+}
+
+.bh-marketplace-search-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.bh-marketplace-price-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bh-marketplace-price-input {
+  width: 110px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1a1a2e;
+  color: #f1f1f1;
+  font-size: 0.85rem;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.bh-marketplace-price-input::placeholder {
+  color: #6b7280;
+}
+
+.bh-marketplace-price-input:focus {
+  border-color: #7c3aed;
+}
+
+.bh-marketplace-price-sep {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .bh-marketplace {
+        padding: 40px 20px;
+    }
+
+    .bh-marketplace-header h1 {
+        font-size: 32px;
+    }
+
+    .bh-marketplace-grid {
+        justify-content: center;
+    }
+}

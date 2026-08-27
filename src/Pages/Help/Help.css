@@ -1,0 +1,161 @@
+
+/* خلفية الصفحة كاملة */
+.help-container {
+  width: 100%;
+  padding: 20px;
+  color: #e6e6e6;
+  font-family: "Work Sans", serif;
+  background-color: var(--bg-color);
+  min-height: 100%;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* عنوان الصفحة */
+.help-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color:  #b56cff;;
+
+  font-weight: 700;
+  animation: slideDown 0.8s ease-out;
+}
+
+/* البطاقات */
+.help-card {
+  background-color:#333;
+  border-left: 4px solid #b56cff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+  animation: fadeUp 0.7s ease-out;
+}
+
+/* تأثير hover */
+.help-card:hover {
+  background: #1a1a1a;
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 0 15px rgba(181, 108, 255, 0.3);
+}
+
+/* عناوين البطاقات */
+.help-card h2 {
+  color: #d9a7ff;
+  margin-bottom: 10px;
+}
+
+/* نصوص */
+.help-card p,
+.help-card li,
+.help-card dd {
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+/* كود */
+.help-card code {
+  background: #333;
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #b56cff;
+}
+
+/* قائمة */
+.help-card ul {
+  padding-left: 20px;
+}
+
+/* Glossary */
+.help-card dt {
+  font-weight: bold;
+  color: #c88cff;
+}
+
+.help-card dd {
+  margin-bottom: 10px;
+}
+
+/* بطاقة الأمن */
+.security {
+  border-left-color: #ff4d8d;
+}
+
+/* Footer */
+.help-footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #aaa;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.help-footer a {
+  color: #b56cff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.help-footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------- */
+/*        Responsive Design      */
+/* ----------------------------- */
+
+/* شاشات التابلت */
+@media (max-width: 768px) {
+  .help-container {
+    padding: 15px;
+  }
+
+  .help-title {
+    font-size: 28px;
+  }
+
+  .help-card {
+    padding: 15px;
+  }
+}
+
+/* شاشات الموبايل */
+@media (max-width: 480px) {
+  .help-container {
+    margin: 20px auto;
+  }
+
+  .help-title {
+    font-size: 24px;
+  }
+
+  .help-card {
+    padding: 12px;
+    border-left-width: 3px;
+  }
+
+  .help-card h2 {
+    font-size: 18px;
+  }
+
+  .help-footer {
+    font-size: 14px;
+  }
+}

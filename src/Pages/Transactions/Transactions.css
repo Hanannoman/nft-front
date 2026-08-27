@@ -1,0 +1,259 @@
+body, .transactions-container {
+  background-color: var(--bg-color);
+  font-family:"Work Sans", serif ;
+}
+
+.transactions-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+.tonkeeper-pay-section {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.btn-open-tonkeeper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.btn-open-tonkeeper:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-open-tonkeeper:active {
+  transform: scale(0.97);
+}
+.page-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.no-transactions {
+  text-align: center;
+  font-size: 1rem;
+  color: #858584;
+  background: #1e1e24;
+  padding: 48px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.transaction-card {
+  background: #1e1e24;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.transaction-card.pending  { border-left: 3px solid #f39c12; }
+.transaction-card.confirmed { border-left: 3px solid #2ecc71; }
+.transaction-card.failed   { border-left: 3px solid #e74c3c; }
+
+.tx-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nft-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.nft-thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.nft-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 3px 0;
+}
+
+.tx-date {
+  font-size: 11px;
+  color: #858584;
+  margin: 0;
+}
+
+.tx-status-badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.tx-status-badge--pending   { background: rgba(243,156,18,0.12); color: #f39c12; }
+.tx-status-badge--confirmed { background: rgba(46,204,113,0.12); color: #2ecc71; }
+.tx-status-badge--failed    { background: rgba(231,76,60,0.12);  color: #e74c3c; }
+
+.tx-amount {
+  background: rgba(255,255,255,0.04);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+  white-space: nowrap;
+}
+
+.amount-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.currency {
+  font-size: 0.8rem;
+  color: #a259ff;
+  font-weight: 600;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin: 16px 0;
+}
+
+.tx-details-pending {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-row strong {
+  font-size: 11px;
+  color: #858584;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wallet-addr, .memo-code {
+  font-family: monospace;
+  font-size: 12px;
+  background: #141416;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #a259ff;
+  border: 1px solid rgba(255,255,255,0.05);
+  word-break: break-all;
+}
+
+.hash-confirmation-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.input-hash {
+  width: 100%;
+  background: #141416;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.input-hash::placeholder { color: #444; }
+.input-hash:focus {
+  outline: none;
+  border-color: #a259ff;
+}
+
+.btn-confirm-payment {
+  background: #a259ff;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.btn-confirm-payment:hover    { background: #bd85ff; }
+.btn-confirm-payment:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.tx-details-success {
+  background: rgba(46,204,113,0.06);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.success-msg {
+  color: #2ecc71;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  font-size: 13px;
+}
+
+.blockchain-hash {
+  font-family: monospace;
+  font-size: 11px;
+  color: #858584;
+  margin: 0;
+  word-break: break-all;
+}
+
+.tx-details-failed {
+  background: rgba(231,76,60,0.06);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.failed-msg {
+  color: #e74c3c;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  font-size: 13px;
+}
+
+.failure-reason {
+  font-size: 12px;
+  color: #858584;
+  margin: 0;
+}
+.loading-spinner { text-align: center; padding: 48px; color: #858584; }
+.error-message   { text-align: center; padding: 48px; color: #e74c3c; }
+
+@media (max-width: 576px) {
+  .tx-header { flex-wrap: wrap; }
+  .tx-amount { align-self: flex-start; }
+}

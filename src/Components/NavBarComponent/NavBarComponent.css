@@ -1,0 +1,144 @@
+.af-nav {
+  font-family: var(--work-sans);
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  max-height: 100px;
+  margin: 0 !important;
+}
+
+.af-nav-img {
+  height: 32px;
+  max-width: 100%;
+  width: auto;
+}
+
+.af-nav-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-left: 40px;
+}
+
+.af-nav-body ul {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 19px;
+}
+
+.af-nav-link a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.af-nav-link a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #a259ff;
+  transition: width 0.3s ease;
+}
+
+.af-nav-link a:hover::after {
+  width: 100%;
+}
+
+.af-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.af-nav-button {
+  height: 60px;
+  padding: 0 30px;
+  width: 152px;
+  font-size: 16px;
+}
+
+/* TOGGLER */
+.toggler {
+  width: 28px;
+  height: 28px;
+  display: none;
+  cursor: pointer;
+}
+
+/* OFFCANVAS */
+.af-offcanvas-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: var(--bg-color);
+  z-index: 999;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.af-offcanvas-nav-body ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.af-offcanvas-nav-body ul li {
+  padding: 15px 0;
+}
+
+.af-offcanvas-nav-body .af-nav-link a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.offcanvas-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .af-nav-body {
+    display: none !important;
+  }
+  .toggler {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .toggler {
+    display: none !important;
+  }
+  .af-nav-body {
+    display: flex !important;
+  }
+}

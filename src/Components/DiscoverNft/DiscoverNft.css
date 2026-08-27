@@ -1,0 +1,28 @@
+.ys-discover-sec{
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+    
+}
+.tilt-discover{
+    margin-bottom: 48px;
+}
+
+.ys-descover{
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+@media (max-width : 1279px) and (min-width :834px ){
+    .ys-descover{
+        grid-template-columns: repeat(2, 1fr); 
+}}
+@media ( max-width : 833px){
+    .ys-descover{
+        grid-template-columns: repeat(1, 1fr); 
+}
+}
